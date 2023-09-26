@@ -1,6 +1,6 @@
 import os
 import streamlit as st ## Importing stream lit
-from PIL import Image, ImpageOps ## Importing image holder function
+from PIL import Image ## Importing image holder function
 from streamlit_option_menu import option_menu ## Importing option menu, to allow toggling between pages
 from camera_input_live import camera_input_live ## Importing camera input function
 
