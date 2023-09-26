@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageOps
 from streamlit_option_menu import option_menu
 
 with st.sidebar:
