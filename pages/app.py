@@ -2,7 +2,7 @@ import os
 import streamlit as st ## Importing stream lit
 from PIL import Image ## Importing image holder function
 from streamlit_option_menu import option_menu ## Importing option menu, to allow toggling between pages
-from camera_input_live import camera_input_live ## Importing camera input function
+# from camera_input_live import camera_input_live ## Importing camera input function
 
 ## Creating a side bar for the user
 with st.sidebar:
@@ -11,9 +11,9 @@ with st.sidebar:
     selected
     
 st.write("This project was prepared fro Prof Teo # Placeholder text ")
-# image = Image.open('pneumonia inception v3.jpeg')
-# st.image(image, caption='Placeholder image',use_column_width=True)
+# # image = Image.open('pneumonia inception v3.jpeg')
+# # st.image(image, caption='Placeholder image',use_column_width=True)
 
-image = camera_input_live()
-st.image(image)
+# image = camera_input_live()
+# st.image(image)
 
