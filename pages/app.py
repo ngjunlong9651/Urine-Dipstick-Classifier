@@ -10,12 +10,17 @@ with st.sidebar:
         icons=['house-door-fill', 'hospital-fill', 'emoji-smile-fill'], menu_icon="cast", default_index=1)
     selected
     
-st.write("Upload an image from your device")
-file = st.file_uploader("", type=["jpg", "png", "jpeg"])
-image = Image.open(file)
-st.image(image, use_column_width=True)
+st.write("Upload an image from your device Or use the device camera to take an image from your device")
+## Make it such that if the user clicks the upload button, the image is uploaded
+
+device_file = st.file_uploader("", type=["jpg", "png", "jpeg"])
+if device_file is not None:
+    image = Image.open(device_file)
+    st.image(image, use_column_width=True)
 
 
-image = camera_input_live()
+device_capture = camera_input_live()
+if device_capture is not None:
+    image = Image.open(device_capture)
 st.image(image)
 
