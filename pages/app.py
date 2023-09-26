@@ -27,7 +27,8 @@ else:
     if device_capture is not None:
         image = Image.open(device_capture)
         size = (224, 224)
-        image = ImageOps.fit(image, size, Image.ANTIALIAS)
-        img = np.asarray(image)
-        img_reshape = img[np.newaxis,...]
-        st.image(img_reshape, use_column_width=True)
+        if image is not None:
+            image = ImageOps.fit(image, size, Image.ANTIALIAS)
+            img = np.asarray(image)
+            img_reshape = img[np.newaxis,...]
+            st.image(img_reshape, use_column_width=True)
