@@ -18,7 +18,7 @@ if option == "Upload an image":
         image = Image.open(device_file)
         st.image(image, use_column_width=True)
 else:
-    device_capture = st.camera_input("Take a picture of the dipstick", use_column_width=True)
+    device_capture = st.camera_input("Take a picture of the dipstick")
     if device_capture is not None:
         image = Image.open(device_capture)
         st.image(image)
