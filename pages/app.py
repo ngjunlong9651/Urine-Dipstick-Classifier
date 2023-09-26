@@ -11,9 +11,9 @@ with st.sidebar:
     selected
     
 st.write("Upload an image from your device")
-# # image = Image.open('pneumonia inception v3.jpeg')
-# # st.image(image, caption='Placeholder image',use_column_width=True)
 file = st.file_uploader("", type=["jpg", "png", "jpeg"])
+image = Image.open(file)
+st.image(image, use_column_width=True)
 
 
 image = camera_input_live()
