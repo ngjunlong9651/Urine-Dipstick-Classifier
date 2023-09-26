@@ -19,16 +19,11 @@ if option == "Upload an image":
         image = Image.open(device_file)
         size = (224, 224)
         image = ImageOps.fit(image, size, Image.ANTIALIAS)
-        img = np.asarray(image)
-        img_reshape = img[np.newaxis,...]
-        st.image(img_reshape, use_column_width=True)
+        st.image(image, use_column_width=True)
 else:
     device_capture = st.camera_input("Take a picture of the dipstick")
     if device_capture is not None:
         image = Image.open(device_capture)
         size = (224, 224)
-        if image is not None:
-            image = ImageOps.fit(image, size, Image.ANTIALIAS)
-            img = np.asarray(image)
-            img_reshape = img[np.newaxis,...]
-            st.image(img_reshape, use_column_width=True)
+        image = ImageOps.fit(image, size, Image.ANTIALIAS)
+        st.image(image, use_column_width=True)
