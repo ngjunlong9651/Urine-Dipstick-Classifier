@@ -2,7 +2,9 @@ import os
 import streamlit as st ## Importing stream lit
 from PIL import Image ## Importing image holder function
 from streamlit_option_menu import option_menu ## Importing option menu, to allow toggling between pages
-from camera_input_live import camera_input_live ## Importing camera input function
+# from camera_input_live import camera_input_live ## Importing camera input function
+
+
 
 ## Creating a side bar for the user
 with st.sidebar:
@@ -19,7 +21,7 @@ if device_file is not None:
     st.image(image, use_column_width=True)
 
 
-device_capture = camera_input_live()
+device_capture = st.camera_input("一二三,茄子!")
 if device_capture is not None:
     image = Image.open(device_capture)
 st.image(image)
