@@ -4,7 +4,7 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 
 with st.sidebar:
-    selected = option_menu("Kidney Stone Prediction App", ["Home", 'Kidney Stone Predictor', 'Next Steps'], 
+    selected = option_menu("Urine Dipstick Scoring App", ["Home", 'Urine Dipstick Scoring App', 'Next Steps'], 
         icons=['house-door-fill', 'hospital-fill', 'emoji-smile-fill'], menu_icon="cast", default_index=1)
     selected
     
