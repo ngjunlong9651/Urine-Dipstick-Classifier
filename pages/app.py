@@ -17,11 +17,11 @@ if option == "Upload an image":
     device_file = st.file_uploader("", type=["jpg", "png", "jpeg"])
     if device_file is not None:
         image = Image.open(device_file)
-        image = image.resize((600,400))
+        image = image.resize((300,200))
         st.image(image, use_column_width=True)
 else:
     device_capture = st.camera_input("Take a picture of the dipstick")
     if device_capture is not None:
         image = Image.open(device_capture)
-        image = image.resize((600,400))
+        image = image.resize((300,200))
         st.image(image, use_column_width=True)
